@@ -30,21 +30,21 @@ function wordlive(){
 
 
 function getWordCount(str) {
-    return str.trim().split(/\s+/).length; 
+
+    if(str.trim()){
+        return str.trim().split(/\s+/).length;
+    }
+    else{
+        return 0
+    }
+
+
 }
-// can be split (" ")
+
 
 
 
 function letlive(){
     var shomar = document.getElementById("contex").value.replace(/[^a-z]/gi, "").length;
     document.getElementById("letspan").innerHTML=shomar;
-}
-
-
-function khali(){
-    var a  = document.getElementById("contex").value
-    if(a == "salam"){
-        document.getElementById("wordspan").innerHTML="3";
-    }
 }
